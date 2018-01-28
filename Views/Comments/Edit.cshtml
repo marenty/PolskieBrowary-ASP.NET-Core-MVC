@@ -1,0 +1,43 @@
+﻿@model PolskieBrowary.Models.Comment
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<link rel="stylesheet" href="~/css/forms.css" />
+
+<h2 class="title">Edytuj komentarz</h2>
+
+<hr />
+<div class="form-box">
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="CommentID" />
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+                    <label asp-for="Comment_text" class="control-label"></label>
+                    <input asp-for="Comment_text" class="form-control" />
+                    <span asp-validation-for="Comment_text" class="text-danger"></span>
+                </div>
+                <div>
+                    <input type="hidden" asp-for="CommentData" />
+                    <input type="hidden" asp-for="UserName" />
+                    <input type="hidden" asp-for="CommentedBeerId">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </div>
+            </form>
+            <div class="back-link-box">
+                <a asp-action="Details" asp-controller="Beers" asp-route-id="@Model.CommentedBeerId" class="back-link">Powrót do listy</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<link rel="stylesheet" href="~/css/Main.css" />
+
+<div id="Site-title">Polskie Browary</div>
+<div id="Desc">
+    Wybierz się z nami na wspaniałą piwną podróż!
+</div>
+<div id="link-container">
+    <a asp-action="Index" asp-controller="Breveries" class="link">Browary</a>
+    <a asp-action="Index" asp-controller="Beers" class="link">Piwa</a>
+    <a asp-action="Index" asp-controller="BeerGenres" class="link">Gatunki</a>
+</div>
+
+
+@if (User.IsInRole("Admin"))
+{
+   <div>lol</div>
+
+}

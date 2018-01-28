@@ -1,0 +1,54 @@
+﻿@model PolskieBrowary.Models.Brevery
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<link rel="stylesheet" href="~/css/forms.css" />
+
+<h2 class="title">Usuń browar</h2>
+
+<h3 class="subtitle">Czy na pewno chcesz usunąć ten browar?</h3>
+<div>
+    <hr />
+    <div class="form-box">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BreveryName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BreveryName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.City)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Established)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Established)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ProductionCapacity)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ProductionCapacity)
+            </dd>
+        </dl>
+        <form asp-action="Delete" class="back-link-box">
+            <input type="hidden" asp-for="BreveryID" />
+            <input type="submit" value="Usuń" class="btn btn-default" /> |
+            <a asp-action="Index" class="back-link">Powrót do listy</a>
+        </form>
+    </div>
+
+
+</div>

@@ -1,0 +1,58 @@
+﻿@model PolskieBrowary.Models.Beer
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<link rel="stylesheet" href="~/css/forms.css" />
+
+<h2 class="title">Usuń piwo</h2="title">
+
+<h3 class="subtitle">Czy na pewno chcesz usunąć to piwo?</h3>
+<div>
+    <hr />
+    <div class="form-box">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BreveryName)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BreveryName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.AlcoholContent)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.AlcoholContent)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.ExtractContent)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.ExtractContent)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Price)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Price)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BreveryID)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Brevery.BreveryName)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.BeerGenreID)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.BeerGenre.GenreName)
+            </dd>
+        </dl>
+        <form asp-action="Delete"  class="back-link-box">
+            <input type="hidden" asp-for="BeerID" />
+            <input type="submit" value="Usuń" class="btn btn-default" /> |
+            <a asp-action="Index" class="back-link">Powrót do listy</a>
+        </form>
+    </div>
+</div>

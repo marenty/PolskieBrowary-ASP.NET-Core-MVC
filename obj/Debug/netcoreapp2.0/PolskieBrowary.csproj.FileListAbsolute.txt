@@ -1,0 +1,12 @@
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\bin\Debug\netcoreapp2.0\PolskieBrowary.deps.json
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\bin\Debug\netcoreapp2.0\PolskieBrowary.runtimeconfig.json
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\bin\Debug\netcoreapp2.0\PolskieBrowary.runtimeconfig.dev.json
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\bin\Debug\netcoreapp2.0\PolskieBrowary.dll
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\bin\Debug\netcoreapp2.0\PolskieBrowary.pdb
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\obj\Debug\netcoreapp2.0\PolskieBrowary.csprojResolveAssemblyReference.cache
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\obj\Debug\netcoreapp2.0\PolskieBrowary.csproj.CoreCompileInputs.cache
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\obj\Debug\netcoreapp2.0\PolskieBrowary.AssemblyInfoInputs.cache
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\obj\Debug\netcoreapp2.0\PolskieBrowary.AssemblyInfo.cs
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\obj\Debug\netcoreapp2.0\PolskieBrowary.dll
+c:\users\marek\source\repos\PolskieBrowary\PolskieBrowary\obj\Debug\netcoreapp2.0\PolskieBrowary.pdb

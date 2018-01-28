@@ -1,0 +1,28 @@
+﻿@model IEnumerable<PolskieBrowary.Models.Comment>
+
+<div class="comment-box">
+    <hr />
+    @foreach (var item in Model)
+    {
+        <div class="comment">
+            <div class="comment-text">
+                @Html.DisplayFor(modelItem => item.CommentData)
+                @Html.DisplayFor(modelItem => item.UserName) napisał:
+            </div>
+            <div>
+                @Html.DisplayFor(modelItem => item.Comment_text)
+            </div>
+            @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+            {
+            <div>
+                <a asp-action="Edit" asp-route-id="@item.CommentID" asp-controller="Comments" class="back-link">Edytuj</a> |
+                <a asp-action="Delete" asp-route-id="@item.CommentID" asp-controller="Comments" class="back-link">Usuń</a>
+            </div>
+            }
+        </div>
+
+    }
+
+
+</div>
+

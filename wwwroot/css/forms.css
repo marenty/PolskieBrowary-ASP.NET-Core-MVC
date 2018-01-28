@@ -1,0 +1,70 @@
+﻿body {
+
+}
+
+.form-box {
+    background-color: rgba(0,0,0,0.9);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3vh;
+    padding-bottom: 1vh;
+    font-family: 'Noticia Text', serif;
+}
+
+.control-label{
+    color: white;
+}
+
+.back-link{
+    color: white;
+}
+
+.back-link:hover{
+    color: red;
+}
+.back-link-box {
+    padding-bottom: 2vh;
+}
+
+.title {
+    color: white;
+    font-family: 'Jacques Francois Shadow', cursive;
+}
+
+.subtitle {
+    color: white;
+    font-family: 'Noticia Text', serif;
+}
+
+.dl-horizontal dt {
+    color: white;
+    font-family: 'Noticia Text', serif;
+}
+
+.dl-horizontal dd {
+    color: white;
+    font-family: 'Noticia Text', serif;
+}
+
+.comment-box {
+    background-color: rgba(0,0,0,0.9);
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    color: white;
+    font-family: 'Noticia Text', serif;
+}
+
+.comment{
+    padding-bottom: 2vh;
+}
+
+.login{
+    color: white;
+}
+
+.registration-text {
+    color: white;
+    font-family: 'Noticia Text', serif;
+}

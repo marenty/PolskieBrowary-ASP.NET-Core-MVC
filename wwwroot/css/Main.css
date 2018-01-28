@@ -1,0 +1,42 @@
+﻿#Site-title {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+    font-family: 'Jacques Francois Shadow', cursive;
+    font-size: 70px;
+    text-align:center;
+    color:white;
+    width: 100%;
+}
+
+
+#Desc {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5vh;
+    background-color: rgba(1,1,1,0.9);
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: 'Noticia Text', serif;
+}
+
+#link-container{
+    display: grid;
+    grid-auto-rows: 80px;
+    align-items: center;
+    justify-content:center;
+}
+
+.link {
+    color: white;
+    width: 250px;
+    background-color: rgba(1,1,1,0.9);
+    text-align: center;
+    font-size: 40px;
+    display: block;
+    font-family: 'Noticia Text', serif;
+}
+
+.link:hover{
+    color: red;
+}

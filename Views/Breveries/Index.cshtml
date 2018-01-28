@@ -1,0 +1,53 @@
+﻿@model IEnumerable<PolskieBrowary.Models.Brevery>
+
+@{
+    ViewData["Title"] = "Browary";
+}
+<link rel="stylesheet" href="~/css/Brevery.css" />
+
+<div id="brevery-title">Polskie Browary</div>
+@if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create" id="create">Dodaj browar</a>
+    </p>
+}
+
+@foreach (var item in Model)
+{
+        <div class="brevery-details">
+
+            <div class="brevery-name">
+                @Html.DisplayFor(modelItem => item.BreveryName)
+            </div>
+            <div class="data-grid">
+                <span>
+                   Miasto: @Html.DisplayFor(modelItem => item.City)
+                </span>
+                <span>
+                    Rok założenia: @Html.DisplayFor(modelItem => item.Established)
+                </span>
+                <span>
+                    Moce produkcyjne: @Html.DisplayFor(modelItem => item.ProductionCapacity) hl
+                </span>
+            </div>
+            <div class="desc-mark">
+                Opis:
+            </div>
+            <div class="brevery-description">@Html.DisplayFor(modelItem => item.Description)
+            </div>
+
+            <div class="show-beers">
+                <a asp-action="BeersInBrevery" asp-controller="Beers" asp-route-id="@item.BreveryID">Pokaż piwa z tego browaru</a><span>|</span>
+            </div>
+
+            <div class="buttons-container">
+                @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                {
+                <a asp-action="Edit" asp-route-id="@item.BreveryID">Edytuj</a><span>|</span>
+                <a asp-action="Delete" asp-route-id="@item.BreveryID">Usuń</a><span>|</span>
+                }
+            </div>
+        </div>
+
+}

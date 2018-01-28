@@ -1,0 +1,32 @@
+﻿@model PolskieBrowary.Models.Comment
+
+<div class="form-box">
+    <hr />
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="row">
+            <div class="col-md-4">
+                <form asp-action="Create" asp-controller="Comments">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Comment_text" class="control-label"></label>
+                        <input asp-for="Comment_text" class="form-control" />
+                        <span asp-validation-for="Comment_text" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input asp-for="CommentedBeerId" type="hidden" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Dodaj komentarz" class="btn btn-default" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="login">Chcesz skomentować to piwo? <a asp-action="Login" asp-controller="Account" class="back-link">Zaloguj się</a></div>
+
+    }
+</div>
+
