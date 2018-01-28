@@ -47,7 +47,7 @@ namespace PolskieBrowary.Controllers
         }
 
         // GET: Comments/Create
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "User")]
         public IActionResult Create()
         {
             ViewData["BeerId"] = new SelectList(_context.Beer, "BeerID", "BreveryName");
@@ -58,7 +58,7 @@ namespace PolskieBrowary.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "User")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Comment_text,CommentedBeerId")] Comment comment)
         {
